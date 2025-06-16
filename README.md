@@ -1,20 +1,29 @@
 # Iris KNN Classifier
 
-This project applies the K-Nearest Neighbors (KNN) algorithm on the classic Iris dataset using `scikit-learn`.
+This project applies the **K-Nearest Neighbors (KNN)** algorithm on the classic Iris dataset using `scikit-learn`.
 
 ## Features
 
-- Tests accuracy for k from 1 to 120
-- Visualizes the effect of k on model performance
-- Selects the best k
+- Tests model accuracy across different values of:
+  - **k** (number of neighbors)
+  - **Test split ratio** (portion of data used for testing)
+- Visualizes:
+  - Accuracy vs **k**
+  - Accuracy vs **Test split**
+- Automatically selects the best value of **k**
 - Predicts the species of a custom flower sample
 
 ## Results
 
-![Plot showing Accuracy vs K](plot.png)
+### Accuracy vs Number of Neighbors (k)
+![Accuracy vs K](plot_k.png)
+
+### Accuracy vs Test Split Ratio
+![Accuracy vs Test Split](plot_split.png)
+
+> Note: Both curves show similar trends due to their effect on training capacity.
 
 ## Run it
 
 ```bash
 pip install -r requirements.txt
-python knn_iris_plot.py
